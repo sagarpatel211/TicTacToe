@@ -18,10 +18,6 @@ class TicTacToe:
                 print(self.board[i] + " | ", end = "")
 
     def check_winner(self, board):
-        # Tie
-        if "-" not in board:
-            self.winner = "Tie"
-
         # Horizontal
         for i in range(0, 9, 3):
             if (board[i] == board[i + 1] == board[i + 2] and board[i] != "-"):
@@ -37,12 +33,14 @@ class TicTacToe:
             self.winner = board[0]
 
         if self.winner != None:
-            if self.winner == "Tie":
-                print("The game was a tie!")
-            else:
-                print("The winner is: " + self.winner + "!")
-                self.game_running = False
-        else:
+            print("The winner is: " + self.winner + "!")
+            self.game_running = False
+            return
+        if "-" not in board:
+            self.winner = "Tie"
+            print("The game is a Tie!")
+            self.game_running = False
+        else:  
             if (self.current_player == "X"):
                 self.current_player = "O"
             else:
