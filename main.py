@@ -38,6 +38,7 @@ class TicTacToe:
             return
         if "-" not in board:
             self.winner = "Tie"
+            print("The game is a Tie!")
             self.game_running = False
         else:  
             if (self.current_player == "X"):
