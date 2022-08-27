@@ -1,5 +1,5 @@
 class TicTacToe:
-    games_played = 0
+    games_played = 0 # variable to store games played
     def __init__(self):
         self.board = ['-', '-', '-',
                       '-', '-', '-',
@@ -9,6 +9,7 @@ class TicTacToe:
         self.game_running = True
         TicTacToe.games_played += 1
     
+    # Print Board
     def print_board(self):
         for i in range(0, 9):
             if ((i + 1) % 3 == 0):
@@ -17,6 +18,7 @@ class TicTacToe:
             else:
                 print(self.board[i] + " | ", end = "")
 
+    # Winner Check
     def check_winner(self, board):
         # Horizontal
         for i in range(0, 9, 3):
@@ -46,6 +48,7 @@ class TicTacToe:
             else:
                 self.current_player = "X"
 
+    # Player Turn
     def player_turn(self):
         result = None
         while result is None:
