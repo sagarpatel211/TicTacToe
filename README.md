@@ -1,3 +1,6 @@
 # TicTacToe
+- Implementing a simple text-based game of Tic Tac Toe using OOP
 
-Implementing my own version of Tic Tac Toe using OOP concepts!
+
+## Contact
+[Email](mailto:sa24pate@uwaterloo.ca) | [Website](https://sagarpatel211.github.io/)
